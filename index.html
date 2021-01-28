@@ -106,13 +106,14 @@ tw-sidebar {
 &lt;p&gt;[[Try Again-&gt;Introduction]] &lt;/p&gt;
 }</tw-passagedata><tw-passagedata pid="7" name="looking around" tags="Forest" position="456,151" size="100,100">{
 (set: $c to (random: 1, 5))
+
 &lt;p&gt;You decided to wander around the forest in hopes to find something that catches your eye. &lt;/p&gt;
-(if: $c is 1) [ &lt;p&gt; As you wandered, you hear water moving nearby. Fishing could be a good idea to get enough food for the family&lt;/p&gt;
+(if: $c &lt; 2) [ &lt;p&gt; As you wandered, you hear water moving nearby. Fishing could be a good idea to get enough food for the family&lt;/p&gt;
 &lt;p&gt; [[Go fishing-&gt;nearby river]]  &lt;/p&gt;
-] (else-if: $c is 2) [
+] (else-if: $c &lt; 3) [
 &lt;p&gt; While looking around, you noticed some of the trees around you have mushrooms on them. You know some of them may be poisonous, but if you look closely, you&#39;ll find something that may be edible&lt;/p&gt;
 &lt;p&gt;[[Try finding mushrooms-&gt;strange mushrooms]]&lt;/p&gt;
-] (else-if: $c is 3) [
+] (else-if: $c &lt; 4) [
 &lt;p&gt;Your eyes catches some bushes nearby with some berries on them. While some berries can be poisonous and you may have to taste test them, you do have some medicine you can get in case you ate a bad one&lt;/p&gt;
 &lt;p&gt;[[Try berry picking-&gt;berry bushes]]&lt;/p&gt;
 ] (else:) [
